@@ -1,6 +1,6 @@
 from Login.korisnici import prijava, sort, registracija
-#from knjige.knjige import sortirane_knjige, pretrazi_knjige,brisanje_knjige, registracija_knjiga,izmena_knjiga
-#from akcije.akcije import ucitaj_akcije,registracija_akcija,pretrazi_akcija,sort1
+from Knjige.Knjige import sortirane_knjige, pretrazi_knjige,brisanje_knjige, registracija_knjiga,izmena_knjiga
+
 
 
 def meni_administrator():
@@ -119,7 +119,7 @@ def meni_prodavac():
 def main():
     for i in range(4):
         if i == 3:
-            print("Previse neuspelih pokusaja za pprijavu!")
+            print("Previse neuspelih pokusaja za prijavu!")
             exit()
 
         ulogovani_korisnik = prijava()

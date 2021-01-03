@@ -1,8 +1,1 @@
-[
-    {
-        "korisnicko_ime": "Admin",
-        "lozinka": "Admin",
-        "ime": "Admin",
-        "prezime": "Adminovic",
-        "tip_korisnika": "Administrator"
-    }]
+[{"korisnicko_ime": "Admin", "lozinka": "Admin", "ime": "Admin", "prezime": "Adminovic", "tip_korisnika": "Administrator"}, {"korisnicko_ime": "Milan", "lozinka": "12345", "ime": "Milan", "prezime": "Milanovic", "tip_korisnika": "Menadzer"}]

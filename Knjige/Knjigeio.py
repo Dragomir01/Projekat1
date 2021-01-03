@@ -1,6 +1,6 @@
 import json
 
-datoteka = './knjige/knjige.json'
+datoteka = './datoteke/knige.json'
 
 
 def sacuvaj_knjige(knjige):
