@@ -1,10 +1,11 @@
 from Login.korisnici import prijava, sort, registracija
 from Knjige.Knjige import sortirane_knjige, pretrazi_knjige,brisanje_knjige, registracija_knjiga,izmena_knjiga
-
+#from akcije.akcije import ucitaj_akcije,registracija_akcija,pretrazi_akcija
 
 
 def meni_administrator():
     while True:
+        print("\n----Administrator----")
         print("\n1. Sortiranje knjiga")
         print("2. Pretraga knjiga")
         print("3. Prikaz akcija")
@@ -43,6 +44,7 @@ def meni_administrator():
 
 def meni_menadzer():
     while True:
+        print("\n----Menadzer----")
         print("\n 1. Sortiranje knjiga")
         print(" 2. Pretraga knjiga")
         print(" 3. Prikaz akcija")
@@ -81,6 +83,7 @@ def meni_menadzer():
 
 def meni_prodavac():
     while True:
+        print("\n----Prodavac----")
         print("\n1. Sortiranje knjiga")
         print("2. Pretraga knjiga")
         print("3. Prikaz akcija")
@@ -88,7 +91,7 @@ def meni_prodavac():
         print("5. Prodaj knjigu")
         print("6. Dodaj knjigu")
         print("7. Izmeni knjigu")
-        print("8. Obrisi knjigu(logicko brisanje)")
+        print("8. Obrisi knjigu")
         print("0. Kraj")
         stavka = int(input("Izaberite stavku: "))
 
@@ -118,12 +121,13 @@ def meni_prodavac():
 
 def main():
     for i in range(4):
-        if i == 3:
-            print("Previse neuspelih pokusaja za prijavu!")
-            exit()
 
         ulogovani_korisnik = prijava()
-        if ulogovani_korisnik != False :
+
+        if ulogovani_korisnik == False and i < 3 :
+            print("Neuspela prijava pokusajte ponovo!")
+
+        if ulogovani_korisnik != False and i < 3 :
             print("Uspesna prijava!Tip korisnika:", ulogovani_korisnik['tip_korisnika'])
             if ulogovani_korisnik['tip_korisnika'] == 'Administrator':
                 meni_administrator()
@@ -133,6 +137,12 @@ def main():
                 meni_prodavac()
             else:
                 print("Greska! Nepostojeca uloga korisnika!")
+
+
+        if i == 3 and ulogovani_korisnik == False:
+            ulogovani_korisnik = prijava()
+            print("Previse neuspelih pokusaja za prijavu!")
+            exit()
 
 
 main()
