@@ -72,6 +72,7 @@ def pretraga_knjiga_jednakost(kljuc, vrednost):
 
 
 def pretrazi_knjige():
+    print("----Pretraga Knjiga----")
     print("\n1. Pretraga po sifri")
     print("2. Pretraga po naslovu")
     print("3. Pretraga po kategoriji")
@@ -120,6 +121,7 @@ def sortiraj_knjige(kljuc):
 
 
 def sortirane_knjige():
+    print("---Soritranje Knjiga----")
     print("\n1. Sortiraj po sifri")
     print("2. Sortiraj po naslovi")
     print("3. Sortiraj po kategoriji")
@@ -183,10 +185,10 @@ def ispisi_knjige(knjige):
 
 def registracija_knjiga():
     while True:
-        sifra = unos_sa_proverom("\n Sifra **za povratak upisite nazad**:")
+        sifra = unos_sa_proverom("\n Sifra:(Za povratak upisite nazad):")
         if sifra == 'nazad':
             return
-        print("testoo")
+
         postojeca_sifra = False
         for knjiga in knjige:
             if knjiga['sifra'] == sifra:
@@ -195,7 +197,7 @@ def registracija_knjiga():
                 break
         if postojeca_sifra == False:
             break
-    print("testoo")
+
     naslov = input('naslov:')
     autor = input('autor:')
     isbn = input('isbn:')
@@ -206,15 +208,15 @@ def registracija_knjiga():
     kategorija = input('kategorija:')
 
     nova_knjiga = {
-        "sifra": "2",
-        "naslov": "Medvedgrad",
-        "autor": "Fredrik Bakman",
+        "sifra": "10",
+        "naslov": "Rodjeni ste bogati",
+        "autor": "Jowling Integron",
         "isbn": "9788652139743",
-        "izdavac": "laguna",
-        "broj strana": "213",
-        "godina": "2020",
-        "cena": "899.10",
-        "kategorija": "Roman",
+        "izdavac": "Vulkan",
+        "broj strana": "516",
+        "godina": "1997",
+        "cena": "999",
+        "kategorija": "Naucan literatura",
         "brisanje": False
     }
     nova_knjiga['sifra'] = sifra
@@ -285,7 +287,7 @@ def izmena_knjiga():
     try:
         godina = int(input("\nizmena godine:"))
     except ValueError:
-        godina = knjige[i]['godina']
+        godina = knjige[i]['godina:']
     try:
         cena = float(input("\n Izmena cene!"))
     except ValueError:
@@ -357,5 +359,5 @@ def brisanje_knjige():
     ispisi_knjige(obrisane_knjige)
     sacuvaj_knjige(knjige)
     print('Knjiga je obrisana')
-    #    print('%s je obrisana u bazu podataka. Knjiga sifra=[%s]' % (obrisane_knjige['naslov'], obrisane_knjige['sifra']))
+    print('%s je obrisana u bazu podataka. Knjiga sifra=[%s]' % (obrisane_knjige['naslov'], obrisane_knjige['sifra']))
     return False

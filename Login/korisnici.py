@@ -2,10 +2,12 @@ import re
 from Login.KorisniciIO import ucitaj_korisnike, sacuvaj_korisnike
 from provera import unos_sa_proverom
 
+
 def prijava():
+    print("\n===[Dobrodosli]===")
     korisnici = ucitaj_korisnike()
-    korisncko_ime = input("korisnicko ime: ")
-    lozinka = input("loznika: ")
+    korisncko_ime = input("\nKorisnicko ime: ")
+    lozinka = input("Loznika: ", )
 
     for korisnik in korisnici:
         if korisnik['korisnicko_ime'] == korisncko_ime and korisnik['lozinka'] == lozinka:
@@ -112,4 +114,4 @@ def registracija():
 
     korisnici.append(novi_korsinik)
     sacuvaj_korisnike(korisnici)
-    print("%s je dodat u korisnike bazu podaatka.Tip korisnika=[%s]" % (novi_korsinik['korisnicko_ime'], novi_korsinik['tip_korisnika']))
+    print("%s je dodat u korisnicku bazu podataka.Tip korisnika=[%s]" % (novi_korsinik['korisnicko_ime'], novi_korsinik['tip_korisnika']))
