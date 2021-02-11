@@ -1,0 +1,25 @@
+[
+    {
+        "sifra": 234,
+        "prodavac": "Lignjoslav",
+        "datum_vreme": "20.19.2021. 21:27:13",
+        "artikli": [],
+        "akcije": [
+            {
+                "sifra": 1112,
+                "artikli": [
+                    {
+                        "naslov": "Voda Vrnjci",
+                        "cena": 1250.0,
+                        "nova cena": "1149.0"
+                    },
+                    {
+                        "naslov": "Dervis i smrt",
+                        "cena": 1500.0,
+                        "nova cena": "1110.0"
+                    }
+                ],
+                "datum_vazenja": "2021-10-05",
+                "kolicina": "1"
+            }
+        ],
